@@ -5,18 +5,18 @@ export default function InfoCard(props)
 {
     return (
 
-        <Col xs="8" lg="6" height="100%">
+        <Col className='column' xs="12" lg="16" height="100%">
 <Card height="100%">
 <CardBody className='card-body' height="100%">
-            <CardTitle>{props.name}</CardTitle>
-            <CardText>{props.birthYear}</CardText>
+            <CardTitle className='card-title'>{props.name}</CardTitle>
+            <CardText className='card-subtitle'>{props.birthYear}</CardText>
             <hr />
-            <CardText>Gender: {props.gender}</CardText>
-            <CardText>Height: {props.height}</CardText>
-            <CardText>Mass: {props.mass}</CardText>
-            <CardText>Eye Color: {props.eyeColor}</CardText>
-            <CardText>Hair Color: {props.hairColor}</CardText>
-            <CardText>Skin Color: {props.skinColor}</CardText>
+            <CardText className='card-info'>Gender: {props.gender}</CardText>
+            <CardText className='card-info'>Height: {props.height}</CardText>
+            <CardText className='card-info'>Mass: {props.mass}</CardText>
+            <CardText className='card-info'>Eye Color: {props.eyeColor}</CardText>
+            <CardText className='card-info'>Hair Color: {props.hairColor}</CardText>
+            <CardText className='card-info'>Skin Color: {props.skinColor}</CardText>
  </CardBody>
 </Card>
 </Col>
