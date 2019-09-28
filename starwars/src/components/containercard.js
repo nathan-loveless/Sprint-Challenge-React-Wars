@@ -1,7 +1,8 @@
 import React, {useState, useEffect} from "react";
 import Axios from "axios";
-import TitleCard from './titlecard';
-import InfoCard from './infocard';
+import InfoCard from './infocard.js';
+import { Container, Row } from "reactstrap";
+import './StarWars.css';
 
 
 
@@ -28,17 +29,20 @@ export default function ContainerCard()
     console.log(swChars);
 
 return (
-    <div>
+    <Container className='container'>
        {
        swChars.map(element =>
         
        <>
-       <TitleCard name={element.name} birthYear={element.birth_year}/>
-       <InfoCard gender={element.gender} eyeColor={element.eye_color} hairColor={element.hair_color} height={element.height} mass={element.mass} skinColor={element.skin_color}/>
+       <Row className='row-content'>
+   
+       <InfoCard name={element.name} birthYear={element.birth_year} gender={element.gender} eyeColor={element.eye_color} hairColor={element.hair_color} height={element.height} mass={element.mass} skinColor={element.skin_color}/>
+       </Row>
+       
        </>
         
        )
        }
-       </div>
+       </Container>
        );
     };

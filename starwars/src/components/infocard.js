@@ -1,16 +1,24 @@
 import React from 'react';
+import { Card, CardText, CardBody, CardTitle, Col } from "reactstrap";
 
 export default function InfoCard(props)
 {
     return (
 
-        <div>
-            <p>Gender: {props.gender}</p>
-            <p>Height: {props.height}</p>
-            <p>Mass: {props.mass}</p>
-            <p>Eye Color: {props.eyeColor}</p>
-            <p>Hair Color: {props.hairColor}</p>
-            <p>Skin Color: {props.skinColor}</p>
-        </div>
+        <Col xs="8" lg="6" height="100%">
+<Card height="100%">
+<CardBody className='card-body' height="100%">
+            <CardTitle>{props.name}</CardTitle>
+            <CardText>{props.birthYear}</CardText>
+            <hr />
+            <CardText>Gender: {props.gender}</CardText>
+            <CardText>Height: {props.height}</CardText>
+            <CardText>Mass: {props.mass}</CardText>
+            <CardText>Eye Color: {props.eyeColor}</CardText>
+            <CardText>Hair Color: {props.hairColor}</CardText>
+            <CardText>Skin Color: {props.skinColor}</CardText>
+ </CardBody>
+</Card>
+</Col>
     );
 }
